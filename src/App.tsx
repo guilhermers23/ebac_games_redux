@@ -25,16 +25,12 @@ function App() {
       .then((res) => setGames(res))
   }, [])
 
-  const adicionarAoCarrinho = () => {
-    console.log('teste')
-  }
-
   return (
     <Provider store={store}>
       <GlobalStyle />
       <div className="container">
         <Header />
-        <Produtos jogos={games} adicionarAoCarrinho={adicionarAoCarrinho} />
+        <Produtos jogos={games} />
       </div>
     </Provider>
   )
